@@ -4,15 +4,19 @@
 	
 		<div class="row">
 			<% @products.each do |product| %>
-				<div class="col-md-4"><img src="<%= product.path_to_image %>">
-				<h4><b><%= product.title %></b></h4>
-					<p><i><%= product.description %></i></p>
-					<p>Цена:<%= product.price %></p>
-					<p>Диаметр:<%= product.size %>
-						<% if product.is_best_offer == true %>
-							<p>Лучшие продажи</p>
-						
-						<% end %>
+				<div class="col-md-4">
+					<div><h4><b><%= product.title %></b></h4></div>
+					<div><img src="<%= product.path_to_image %>"></div>
+						<div><p><i><%= product.description %></i></p></div>
+						<div><p>Цена:<%= product.price %></p></div>
+						<div><p>Диаметр:<%= product.size %></p></div>
+
+							<% if product.is_best_offer == true %>
+								<div><p>Лучшие продажи</p></div>
+
+							
+							<% end %>
+						<div><button class="btn btn-sm btn-success" onclick="add_to_cart(<%= product.id %>)">В корзину</button></div>
 					
 				</div>
 			<% end %>
@@ -25,5 +29,5 @@
 
 
 
-<button class="btn btn-primary" onclick="something()">Click me</button>
+
  
