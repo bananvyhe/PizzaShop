@@ -41,9 +41,9 @@
 			    </ul>
 			    <ul class="nav navbar-nav navbar-right">
 			    	<li>
-			    	<form>
-			    		<input type="text" id="orders_input" name="orders"/>
-			    		<input type="submit" class="btn btn-primary btn-lg" value="Cart (...)" />
+			    	<form action="/cart" method="post">
+			    		<input type="hidden" id="orders_input" name="orders"/>
+			    		<input id="orders_button" type="submit" class="btn btn-primary btn-lg" value="Cart (...)" />
 			    	</form>
 			    	 
 			    </ul>
