@@ -6,7 +6,7 @@
 			<% @products.each do |product| %>
 				<div class="col-md-4">
 					<div><h4><b><%= product.title %></b></h4></div>
-					<div><img src="<%= product.path_to_image %>"></div>
+					<div><img class="img-thumbnail img_t" src="<%= product.path_to_image %>"></div>
 						<div><p><i><%= product.description %></i></p></div>
 						<div><p>Цена:<%= product.price %></p></div>
 						<div><p>Диаметр:<%= product.size %></p></div>

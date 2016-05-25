@@ -1,0 +1,6 @@
+<h2>Список записавшихся</h2>
+<% @ord.each do |i| %>
+	<p>
+		<%= i.name %> <%= i.phone %> <%= i.address %> <%= i.order %>
+	</p>
+<% end %>
