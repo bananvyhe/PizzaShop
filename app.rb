@@ -46,11 +46,11 @@ end
 post '/place_order' do
 	 @c = Order.new params[:order]
 	if @c.save
-		erb "<h3>Спасибо, вы записались</h3>"
+		erb :order_placed
 
 	else
 		@error = @c.errors.full_messages.first
-		erb :cart
+		 
 	end 
 	 
 end
