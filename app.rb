@@ -59,7 +59,10 @@ post '/place_order' do
 	 
 end
 
-
+get '/admin' do
+	@orders = Order.order('created_at DESC')
+	erb :admin
+end
 
 
 def parse_orders_input orders_input
